@@ -3,6 +3,9 @@ let router = express.Router()
 let path = require('path')
 let main = require('./main/main')
 let email = require('./email/email')
+let join = require('./join/join')
+
+
 
 //url routing
 router.get('/', function(req, res){
@@ -12,5 +15,6 @@ router.get('/', function(req, res){
 
 router.use('/main', main)
 router.use('/email', email)
+router.use('/join', join)
 
 module.exports = router
