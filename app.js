@@ -2,6 +2,10 @@ let express = require('express')
 let app = express()
 let bodyParser = require('body-parser')
 let index = require('./router/index')
+let passport = require('passport')
+let localStrategy = require('passport-local').Strategy
+let session = require('express-session')
+let flash = require('connect-flash')
 
 app.listen(3000, function(){
     console.log(`start! express server on port 3000`)
