@@ -5,8 +5,8 @@ let path = require('path')
 
 
 router.get('/', function(req, res){
-    console.log('main js loaded')
-    // res.sendFile(path.json(__dirname, "../public/main.html"))
+    let id = req.user
+    if(!id) res.render('login.ejs')
     res.render('main.ejs', {'id' : id})
 })
 

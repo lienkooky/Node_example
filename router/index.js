@@ -4,6 +4,8 @@ let path = require('path')
 let main = require('./main/main')
 let email = require('./email/email')
 let join = require('./join/join')
+let login = require('./login/login')
+let logout = require('./logout/logout')
 
 
 
@@ -16,5 +18,7 @@ router.get('/', function(req, res){
 router.use('/main', main)
 router.use('/email', email)
 router.use('/join', join)
+router.use('/login', login)
+router.use('/logout', logout)
 
 module.exports = router
